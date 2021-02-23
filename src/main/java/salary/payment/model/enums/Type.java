@@ -1,6 +1,6 @@
 package salary.payment.model.enums;
 
-public enum  Type {
+public enum Type {
     debtor,
     creditor
 }

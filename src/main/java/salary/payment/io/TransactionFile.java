@@ -10,7 +10,6 @@ import static java.nio.charset.StandardCharsets.UTF_8;
 public class TransactionFile {
 
 
-
     public void createTransactionFile(salary.payment.model.dto.TransactionFileDto param) {
         // initialize Path object
         Path path = Paths.get("transactionFile.txt");
