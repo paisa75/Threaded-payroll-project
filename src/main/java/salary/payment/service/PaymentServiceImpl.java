@@ -48,6 +48,10 @@ public class PaymentServiceImpl implements PaymentService {
                 TransactionFile transactionFile = new TransactionFile();
 
 
+                paymentFile.addToPaymentFile(new PaymentFileDto(companyDepositNo, sum, Type.debtor));
+                inventory.replaceSelected(new InventoryFileDto(companyDepositNo, companyBalance.subtract(sum)));
+
+
                 for (EmployeeSalary employeeSalary : emp) {
                     paymentFile.addToPaymentFile(new PaymentFileDto(employeeSalary.getDepositNo(), employeeSalary.getAmount(), Type.creditor));
                     InventoryFileDto dto = new InventoryFileDto(employeeSalary.getDepositNo(), employeeSalary.getAmount());

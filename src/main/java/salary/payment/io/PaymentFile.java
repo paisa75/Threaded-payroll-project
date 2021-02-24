@@ -1,5 +1,7 @@
 package salary.payment.io;
 
+import salary.payment.model.dto.PaymentFileDto;
+
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -8,8 +10,7 @@ import java.nio.file.StandardOpenOption;
 import static java.nio.charset.StandardCharsets.UTF_8;
 
 public class PaymentFile {
-
-    public void addToPaymentFile(salary.payment.model.dto.PaymentFileDto param) {
+    public void addToPaymentFile(PaymentFileDto param) {
         // initialize Path object
         Path path = Paths.get("paymentFile.txt");
         //create file
